@@ -6,10 +6,20 @@
 }
 
 @font-face {
-  font-family: 'Leotaro';
-  src: local('Leotaro-Regular'),
-      url('../fonts/LeotaroRegular.woff2') format('woff2'),
-      url('../fonts/LeotaroRegular.woff') format('woff');
+  font-family: 'Antarctic';
+  src: local('Antarctic'),
+      url('../fonts/Antarctic.woff2') format('woff2'),
+      url('../fonts/Antarctic.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Diplomascriptrus';
+  src: local('Diplomascriptrus'),
+      url('../fonts/Diplomascriptrus.woff2') format('woff2'),
+      url('../fonts/Diplomascriptrus.woff') format('woff');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -30,7 +40,7 @@ body {
   padding: 0;
   min-width: 320px;
   max-width: 100%;
-  font-family: 'Actay', 'Roboto', sans-serif;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
   background-color: var(--light);
 }
 
@@ -40,6 +50,8 @@ a {
 
 img {
   max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -59,6 +71,24 @@ ul {
 .container {
   width: 100%;
   padding: 0 72px;
+}
+
+.section-title {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  font-family: 'Diplomascriptrus', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  color: var(--lightest);
+}
+
+.text-basic {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media(max-width: 1024px) {
@@ -141,6 +171,12 @@ ul {
   position: relative;
   z-index: 12;
   margin: auto 10px;
+  font-family: 'Antarctic', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  color: var(--light);
+
 }
 
 .burger-nav {
@@ -155,7 +191,7 @@ ul {
   margin-left: auto;
   width: 100%;
   height: 100%;
-  z-index: 13;
+  z-index: 14;
   flex-grow: 0;
   justify-self: end;
 }
@@ -183,11 +219,16 @@ ul {
 
 .bar {
   display: block;
+  z-index: 14;
   width: 30px;
-  height: 3px;
-  margin: 6px auto;
+  height: 2px;
+  margin: 7px auto;
   background-color: var(--light);
   transition: 0.2s;
+}
+
+.bar:nth-child(2) {
+  height: 1px;
 }
 
 .popup {
@@ -229,7 +270,7 @@ ul {
   width: 100%;
   font-size: 20px;
   /* font-family: 'Actay-Regular', 'Roboto', sans-serif; */
-  color: var(--dark);
+  color: var(--clay);
   transition: color 0.2s;
 }
 
@@ -239,11 +280,11 @@ ul {
 }
 
 .menu-product-link {
-  color: var(--dark);
+  color: var(--clay);
 }
 
 .menu-link:hover, .menu-product-link:hover {
-  color: var(--less-dark);
+  color: var(--light);
 }
 
 .hamb__field.active .bar:nth-child(2) {
@@ -252,47 +293,84 @@ ul {
 
 .hamb__field.active .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
-  background-color: var(--dark);
+  background-color: var(--clay);
   width: 35px;
   height: 3px;
 }
 
 .hamb__field.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
-  background-color: var(--dark);
+  background-color: var(--clay);
   width: 35px;
   height: 3px;
 }
 
 .first-screen {
-  background-image: url('../img/first_screen.png');
+  /* background-image: url('../img/first_screen.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: contain; */
   margin: 0;
   padding: 0;
 }
 
-.first-screen-container {
-  position: relative;
-  height: 100%;
+.first-screen-background-image {
+  position: absolute;
   top: 0;
-  margin: 0;
-  padding: 0;
+  z-index: -1;
+  width: 100%;
+  /* height: 100%; */
+  max-width: 100%;
 }
 
-.first-screen-duck {
+/* .first-screen-duck {
   position: absolute;
   right: 0;
   top: 43%;
   width: 50%;
   z-index: 8;
+} */
+
+.first-screen-container {
+  position: relative;
+  z-index: 2;
 }
 
-.about-us {
-  margin-top: -86px;
+.first-screen-texts {
+  position: relative;
+  /* top: 95px; */
+  /* left: 35px; */
+  margin-top: 95px;
+  margin-left: 35px;
+  z-index: 2;
 }
+
+.first-screen-text {
+  margin: 0;
+  padding: 0;
+  font-family: 'Antarctic', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  color: var(--lightest);
+  line-height: 80%;
+  transform: rotate(-3deg);
+}
+
+/* .about-us {
+  margin-top: -86px;
+} */
 
 .about-us-container {
   margin-top: 0;
+}
+
+.about-us-title {
+  margin-top: 270px;
+  margin-left: 80px;
+  background-image: url(../img/underline.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  overflow: auto;
 }
