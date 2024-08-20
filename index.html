@@ -59,10 +59,9 @@
 </div>
 </header>
 <main class="main">
-<section class="first-screen">
-  <img src="img/3-in-1-with-duck.jpg" alt="" class="first-screen-background-image">
-  <div class="first-screen-container container">
-    <!-- <img class="first-screen-duck" src="img/first_screen-duck.png" alt="Утенок из камня и металла"> -->
+<section class="first_screen">
+  <div class="first_screen-container">
+    <img src="img/first_screen.png" alt="" class="first-screen-background-image">
     <div class="first-screen-texts">
       <p class="first-screen-text">
         Мы слышим,
@@ -80,21 +79,85 @@
   </div>
 </section>
 <section class="about-us">
-<div class="container">
-<h2 class="section-title about-us-title">
-  О нас
-</h2>
-<div class="about-us-content">
-  <img src="" alt="">
-  <p class="text-basic about-us-text">
-    Привет! Меня зовут Алексей Радченко, я занимаюсь кузницей вот уже 15 лет. Я делаю то и другое, и вот что-то еще. В общем, здесь какой-то текст, который надо сюда написать.
-  </p>
-</div>
+<div class="about_us-container">
+  <img class="about_us-img" src="img/about_us.png" alt="">
+  <img class="about_us-duck" src="img/first_screen-duck.png" alt="Утенок из камня и металла">
+  <h2 class="section-title about-us-title">
+    О нас
+  </h2>
+  <div class="about_us-content">
+    <img src="#" alt="">
+    <p class="text-basic about_us-text">
+      Вас приветствует арт-студия "Музыка камня".
+    </p>
+    <p class="text-basic about_us-text">
+      Спустя много лет работы с металлом у нас возникла идея сочетания двух материалов — камень и металл. На сайте вы можете познакомиться с нашими изделиями, которые будут радовать Вас и Ваших близких долгие годы.
+    </p>
+  </div>
 </div>
 </section>
 <section class="products">
-<div class="container products-container">
-
+<div class="products-container">
+  <div class="products-descr">
+    <!-- <h2 class="section-title products-title">
+      Изделия
+    </h2>
+    <p class="basic-text">
+      На данный момент в наличии есть такие-то изделия. Также Вы можете прислать свои эскизы, по которым я выполню изделие. В общем, здесь текст про изделия в целом.
+    </p> -->
+  </div>
+  <ul class="products-list">
+    <li class="product-item">
+      <h3 class="product-title">
+        Улитка
+      </h3>
+      <div class="slider-container">
+        <div class="slider">
+          <img class="product-img" src="img/products/snail/IMG_9143.jpg" alt="Улитка из металла">
+          <img class="product-img" src="img/products/snail/IMG_9144.jpg" alt="Улитка в саду">
+          <img class="product-img" src="img/products/snail/IMG_9146.jpg" alt="Улитка из металла и камня">
+        </div>
+        <button class="prev-button" aria-label="Посмотреть предыдущий слайд">
+          <img class="slider-button" src="img/graphics/prev-button.png" alt="">
+        </button>
+        <button class="next-button" aria-label="Посмотреть следующий слайд">
+          <img class="slider-button" src="img/graphics/next-button.png" alt="">
+        </button>
+      </div>
+      <details class="product-descr">
+        <summary class="product-descr-title">Характеристики</summary>
+        <p class="basic-text product-descr-text">Цена: 4200 р</p>
+        <p class="basic-text product-descr-text">Размер: 50 см</p>
+      </details>
+    </li>
+    <!-- <li class="product-item">
+      <h3 class="product-title">
+        Утка с утятами
+      </h3>
+      <div class="slider-container-duck">
+        <div class="slider-duck">
+          <img class="product-img-duck" src="img/products/duck/duck-5.jpg" alt="Улитка из металла">
+          <img class="product-img-duck" src="img/products/duck/duck-8.jpg" alt="Улитка в саду">
+          <img class="product-img-duck" src="img/products/duck/duck-7.jpg" alt="Улитка из металла и камня">
+          <img class="product-img-duck" src="img/products/duck/duck-1.jpg" alt="Улитка из металла и камня">
+          <img class="product-img-duck" src="img/products/duck/duck-2.jpg" alt="Улитка из металла и камня">
+          <img class="product-img-duck" src="img/products/duck/duck-3.jpg" alt="Улитка из металла и камня">
+          <img class="product-img-duck" src="img/products/duck/duck-4.jpg" alt="Улитка из металла и камня">
+        </div>
+        <button class="prev-button-duck" aria-label="Посмотреть предыдущий слайд">
+          <img class="slider-button" src="img/graphics/prev-button.png" alt="">
+        </button>
+        <button class="next-button-duck" aria-label="Посмотреть следующий слайд">
+          <img class="slider-button" src="img/graphics/next-button.png" alt="">
+        </button>
+      </div>
+      <details class="product-descr">
+        <summary class="product-descr-title">Характеристики</summary>
+        <p class="basic-text product-descr-text">Цена: от 12000 р</p>
+        <p class="basic-text product-descr-text">Размер: 50 см</p>
+      </details>
+    </li> -->
+  </ul>
 </div>
 </section>
 <section class="contacts">
@@ -113,5 +176,8 @@
 </footer>
 </main>
 <script src="index.js"></script>
+<script type="module">
+  import swiper from 'https://cdn.jsdelivr.net/npm/swiper@11.1.9/+esm'
+  </script>
 </body>
 </html>
