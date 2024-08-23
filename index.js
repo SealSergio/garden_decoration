@@ -249,3 +249,41 @@ function updateSlider_deer() {
 
 // Инициализация слайдера
 updateSlider_deer();
+
+// Получаем элементы слайдера
+const slider_tree = document.querySelector('.slider-tree');
+const prevButton_tree = document.querySelector('.prev-button-tree');
+const nextButton_tree = document.querySelector('.next-button-tree');
+const slides_tree = Array.from(slider_tree.querySelectorAll('.product-img-tree'));
+const slideCount_tree = slides_tree.length;
+let slideIndex_tree = 0;
+
+// Устанавливаем обработчики событий для кнопок
+prevButton_tree.addEventListener('click', showPreviousSlide_tree);
+nextButton_tree.addEventListener('click', showNextSlide_tree);
+
+// Функция для показа предыдущего слайда
+function showPreviousSlide_tree() {
+  slideIndex_tree = (slideIndex_tree - 1 + slideCount_tree) % slideCount_tree;
+  updateSlider_tree();
+}
+
+// Функция для показа следующего слайда
+function showNextSlide_tree() {
+  slideIndex_tree = (slideIndex_tree + 1) % slideCount_tree;
+  updateSlider_tree();
+}
+
+// Функция для обновления отображения слайдера
+function updateSlider_tree() {
+  slides_tree.forEach((slide, index) => {
+    if (index === slideIndex_tree) {
+      slide.style.display = 'block';
+    } else {
+      slide.style.display = 'none';
+    }
+  });
+}
+
+// Инициализация слайдера
+updateSlider_tree();
