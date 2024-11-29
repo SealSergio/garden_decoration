@@ -3,10 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Музыка камня</title>
+  <title>Музыка камня - скульптуры для сада</title>
+  <meta name="description" content="Мы изготавливаем садовые скульптуры из камня и металла. Вы можете посмотреть скульпутры в каталоге или заказать по собственному эскизу. Только ручная работа.">
   <link rel="icon" href="img/graphics/favicon.ico">
   <link rel="stylesheet" href="CSS/normalize.css">
   <link rel="stylesheet" href="CSS/style.css">
+  <script defer src="JS/burger-nav.js"></script>
+  <script defer src="JS/index.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(99079301, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/99079301" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
 </head>
 <body>
 <header class="header" id="header">
@@ -71,13 +91,14 @@
   </div>
 </div>
 </header>
+<div class="body__back"></div> <!-- Пустой контейнер для закрытия бургер-меню при клике на любую точку экрана -->
 <main class="main">
-<section class="first_screen">
-  <div class="first_screen-container">
-    <img src="img/first_screen.png" alt="" class="first-screen-background-image">
+<section class="first-screen">
+  <div class="first-screen-container">
+    <img src="img/first-screen.png" alt="" class="first-screen-background-image">
     <div class="first-screen-texts">
       <p class="first-screen-text">
-        Мы&nbsp;слышим,
+        "Мы&nbsp;слышим,
       </p>
       <p class="first-screen-text">
         как&nbsp;камень&nbsp;звучит,
@@ -86,23 +107,23 @@
         и&nbsp;воплощаем
       </p>
       <p class="first-screen-text">
-        эту&nbsp;музыку в&nbsp;жизнь...
+        эту&nbsp;музыку в&nbsp;жизнь..."
       </p>
     </div>
   </div>
 </section>
 <section class="about-us">
-<div class="about_us-container">
-  <img class="about_us-img" src="img/about_us.png" alt="">
-  <img id="about-us" class="about_us-duck" src="img/first_screen-duck.png" alt="Утенок из камня и металла">
-  <div class="about_us-content">
-    <h2 class="section-title about-us-title">
+<div class="about-us__container">
+  <img class="about-us__img" src="img/about-us.png" alt="">
+  <img id="about-us" class="about-us__duck" src="img/first-screen-duck.png" alt="Утенок из камня и металла">
+  <div class="about-us__content">
+    <h2 class="section-title about-us__title">
       О&nbsp;нас
     </h2>
-    <p class="text-basic about_us-text">
+    <p class="text-basic about-us__text">
       Вас приветствует арт-студия "Музыка камня".
     </p>
-    <p class="text-basic about_us-text">
+    <p class="text-basic about-us__text">
       Спустя много лет работы с металлом у нас возникла идея сочетания двух материалов — камень и металл. На сайте вы можете познакомиться с нашими изделиями, которые будут радовать Вас и Ваших близких долгие годы.
     </p>
   </div>
@@ -110,28 +131,20 @@
 </section>
 <section class="products" id="products">
 <div class="products-container">
-  <!-- <div class="products-descr">
-    <h2 class="section-title products-title">
-      Изделия
-    </h2>
-    <p class="text-basic">
-      На данный момент в наличии есть такие-то изделия. Также Вы можете прислать свои эскизы, по которым я выполню изделие. В общем, здесь текст про изделия в целом.
-    </p>
-  </div> -->
   <ul class="products-list">
     <li class="product-item">
       <h3 class="product-title">
         Лебедь
       </h3>
       <div class="slider-container">
-        <div class="slider-swan">
-          <img class="product-img-swan" src="img/products/swan/swan-1.jpg" alt="Скульптура лебедь">
-          <img class="product-img-swan" src="img/products/swan/swan-2.jpg" alt="Лебедь из металла">
+        <div class="slider">
+          <img class="product-img" src="img/products/swan/swan-1.jpg" alt="Скульптура лебедь">
+          <img class="product-img" src="img/products/swan/swan-2.jpg" alt="Лебедь из металла">
         </div>
-        <button class="prev-button-swan" aria-label="Посмотреть предыдущий слайд">
+        <button class="prev-button" aria-label="Посмотреть предыдущий слайд">
           <img class="slider-button" src="img/graphics/prev-button.png" alt="">
         </button>
-        <button class="next-button-swan" aria-label="Посмотреть следующий слайд">
+        <button class="next-button" aria-label="Посмотреть следующий слайд">
           <img class="slider-button" src="img/graphics/next-button.png" alt="">
         </button>
       </div>
@@ -147,16 +160,17 @@
         Олень
       </h3>
       <div class="slider-container">
-        <div class="slider-deer">
-          <img class="product-img-deer" src="img/products/deer/deer-1.jpg" alt="Олень садовая скульптура">
-          <img class="product-img-deer" src="img/products/deer/deer-2.jpg" alt="Олень из камня">
-          <img class="product-img-deer" src="img/products/deer/deer-3.jpg" alt="Олень из металла">
-          <img class="product-img-deer" src="img/products/deer/deer-4.jpg" alt="Олень из камня и металла">
+        <div class="slider">
+          <img class="product-img" src="img/products/deer/deer-1.jpg" alt="Олень садовая скульптура">
+          <img class="product-img" src="img/products/deer/deer-2.jpg" alt="Олень из камня">
+          <img class="product-img" src="img/products/deer/deer-3.jpg" alt="Олень из металла">
+          <img class="product-img" src="img/products/deer/deer-4.jpg" alt="Олень из камня и металла">
+          <img class="product-img" src="img/products/deer/deer-5.jpg" alt="Олень из камня и металла">
         </div>
-        <button class="prev-button-deer" aria-label="Посмотреть предыдущий слайд">
+        <button class="prev-button" aria-label="Посмотреть предыдущий слайд">
           <img class="slider-button" src="img/graphics/prev-button.png" alt="">
         </button>
-        <button class="next-button-deer" aria-label="Посмотреть следующий слайд">
+        <button class="next-button" aria-label="Посмотреть следующий слайд">
           <img class="slider-button" src="img/graphics/next-button.png" alt="">
         </button>
       </div>
@@ -173,19 +187,19 @@
         Утка с утятами
       </h3>
       <div class="slider-container">
-        <div class="slider-duck">
-          <img class="product-img-duck" src="img/products/duck/duck-5.jpg" alt="Улитка из металла">
-          <img class="product-img-duck" src="img/products/duck/duck-8.jpg" alt="Улитка в саду">
-          <img class="product-img-duck" src="img/products/duck/duck-7.jpg" alt="Улитка из металла и камня">
-          <img class="product-img-duck" src="img/products/duck/duck-1.jpg" alt="Улитка из металла и камня">
-          <img class="product-img-duck" src="img/products/duck/duck-2.jpg" alt="Улитка из металла и камня">
-          <img class="product-img-duck" src="img/products/duck/duck-3.jpg" alt="Улитка из металла и камня">
-          <img class="product-img-duck" src="img/products/duck/duck-4.jpg" alt="Улитка из металла и камня">
+        <div class="slider">
+          <img class="product-img" src="img/products/duck/duck-5.jpg" alt="Утка из металла">
+          <img class="product-img" src="img/products/duck/duck-8.jpg" alt="Утка в саду">
+          <img class="product-img" src="img/products/duck/duck-7.jpg" alt="Утенок из металла и камня">
+          <img class="product-img" src="img/products/duck/duck-1.jpg" alt="Утята из металла и камня">
+          <img class="product-img" src="img/products/duck/duck-2.jpg" alt="Утка из металла и камня">
+          <img class="product-img" src="img/products/duck/duck-3.jpg" alt="Утка из металла и камня">
+          <img class="product-img" src="img/products/duck/duck-4.jpg" alt="Утка из металла и камня">
         </div>
-        <button class="prev-button-duck" aria-label="Посмотреть предыдущий слайд">
+        <button class="prev-button" aria-label="Посмотреть предыдущий слайд">
           <img class="slider-button" src="img/graphics/prev-button.png" alt="">
         </button>
-        <button class="next-button-duck" aria-label="Посмотреть следующий слайд">
+        <button class="next-button" aria-label="Посмотреть следующий слайд">
           <img class="slider-button" src="img/graphics/next-button.png" alt="">
         </button>
       </div>
@@ -234,15 +248,15 @@
         Цапля
       </h3>
       <div class="slider-container">
-        <div class="slider-heron">
-          <img class="product-img-heron" src="img/products/heron/heron-1.jpg" alt="Цапля садовая скульптура">
-          <img class="product-img-heron" src="img/products/heron/heron-2.jpg" alt="Цапля из камня">
-          <img class="product-img-heron" src="img/products/heron/heron-3.jpg" alt="Цапля из кмня и металла">
+        <div class="slider">
+          <img class="product-img" src="img/products/heron/heron-1.jpg" alt="Цапля садовая скульптура">
+          <img class="product-img" src="img/products/heron/heron-2.jpg" alt="Цапля из камня">
+          <img class="product-img" src="img/products/heron/heron-3.jpg" alt="Цапля из кмня и металла">
         </div>
-        <button class="prev-button-heron" aria-label="Посмотреть предыдущий слайд">
+        <button class="prev-button" aria-label="Посмотреть предыдущий слайд">
           <img class="slider-button" src="img/graphics/prev-button.png" alt="">
         </button>
-        <button class="next-button-heron" aria-label="Посмотреть следующий слайд">
+        <button class="next-button" aria-label="Посмотреть следующий слайд">
           <img class="slider-button" src="img/graphics/next-button.png" alt="">
         </button>
       </div>
@@ -258,14 +272,18 @@
         Парящие камни
       </h3>
       <div class="slider-container">
-        <div class="slider-tree">
-          <img class="product-img-tree" src="img/products/tree/tree-1.jpg" alt="Парящие камни">
-          <img class="product-img-tree" src="img/products/tree/tree-2.jpg" alt="Дерево из камней">
+        <div class="slider">
+          <img class="product-img product-img-tree" src="img/products/tree/tree-1.jpg" alt="Парящие камни">
+          <img class="product-img product-img-tree" src="img/products/tree/tree-2.jpg" alt="Дерево из камней">
+          <img class="product-img product-img-tree" src="img/products/tree/tree-3.jpg" alt="Садовая скульптура">
+          <img class="product-img product-img-tree" src="img/products/tree/tree-4.jpg" alt="Парящие камни">
+          <img class="product-img product-img-tree" src="img/products/tree/tree-5.jpg" alt="Скульпутра из камней">
+          <img class="product-img product-img-tree" src="img/products/tree/tree-6.jpg" alt="Дерево из камней">
         </div>
-        <button class="prev-button-tree" aria-label="Посмотреть предыдущий слайд">
+        <button class="prev-button" aria-label="Посмотреть предыдущий слайд">
           <img class="slider-button" src="img/graphics/prev-button.png" alt="">
         </button>
-        <button class="next-button-tree" aria-label="Посмотреть следующий слайд">
+        <button class="next-button" aria-label="Посмотреть следующий слайд">
           <img class="slider-button" src="img/graphics/next-button.png" alt="">
         </button>
       </div>
@@ -335,7 +353,5 @@
 </div>
 </footer>
 </main>
-<script src="index.js"></script>
-<!-- <script src="index2.js"></script> -->
 </body>
 </html>
