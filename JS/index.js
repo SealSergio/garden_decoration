@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   function slide(productButton) {
-    const card = productButton.closest('.slider-container');
+    const card = productButton.closest('.slider__container');
     const slider = card.querySelector('.slider');
     const prevButton = card.querySelector('.prev-button');
     const nextButton = card.querySelector('.next-button');
-    const slides = Array.from(slider.querySelectorAll('.product-img'));
+    const slides = Array.from(slider.querySelectorAll('.products__img'));
     const slideCount = slides.length;
     let slideIndex = 0;
 
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateSlider();
   }
 
-  const productButtons = Array.from(document.querySelectorAll('.slider-button'));
+  const productButtons = Array.from(document.querySelectorAll('.slider__button'));
   productButtons.forEach((button) => {
     slide(button);
   });
