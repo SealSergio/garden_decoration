@@ -545,7 +545,6 @@ ul {
   top: -40%;
   width: clamp(160px, 50%, 400px);
   z-index: 8;
-  filter: blur(1px);
 }
 
 @media(min-width: 540px) {
@@ -892,15 +891,15 @@ ul {
 }
 
 .contacts__link_tel::before {
-  background-image: url('../img/graphics/contacts__icon-1.png');
+  background-image: url('../img/graphics/contacts-icon-1.png');
 }
 
 .contacts__link_telegram::before {
-  background-image: url('../img/graphics/contacts__icon-2.png');
+  background-image: url('../img/graphics/contacts-icon-2.png');
 }
 
 .contacts__link_mail::before {
-  background-image: url('../img/graphics/contacts__icon-3.png');
+  background-image: url('../img/graphics/contacts-icon-3.png');
 }
 
 .contacts__swan {
