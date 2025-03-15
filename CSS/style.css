@@ -9,8 +9,7 @@
 @font-face {
   font-family: 'Antarctic';
   src: local('Antarctic'),
-      url('../fonts/Antarctic.woff2') format('woff2'),
-      url('../fonts/Antarctic.woff') format('woff');
+      url('../fonts/Antarctic.woff2') format('woff2');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -19,8 +18,7 @@
 @font-face {
   font-family: 'Diplomascriptrus';
   src: local('Diplomascriptrus'),
-      url('../fonts/Diplomascriptrus.woff2') format('woff2'),
-      url('../fonts/Diplomascriptrus.woff') format('woff');
+      url('../fonts/Diplomascriptrus.woff2') format('woff2');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -29,8 +27,7 @@
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat-ExtraLight'),
-      url('../fonts/Montserrat-ExtraLight.woff2') format('woff2'),
-      url('../fonts/Montserrat-ExtraLight.woff') format('woff');
+      url('../fonts/Montserrat-ExtraLight.woff2') format('woff2');
   font-display: swap;
   font-weight: 200;
   font-style: normal;
@@ -39,8 +36,7 @@
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat-Regular'),
-      url('../fonts/Montserrat-Regular.woff2') format('woff2'),
-      url('../fonts/Montserrat-Regular.woff') format('woff');
+      url('../fonts/Montserrat-Regular.woff2') format('woff2');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -683,6 +679,7 @@ ul {
   display: flex;
   align-items: stretch;
   transition: 2s ease-in-out;
+  min-height: 200px;
 }
 
 .products__img {
