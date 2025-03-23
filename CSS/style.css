@@ -780,6 +780,10 @@ ul {
   font-weight: 200;
 }
 
+.products-descr__text--duck, .products-descr__text--turtle {
+  margin-top: 10px;
+}
+
 .products-descr__name {
   font-weight: 400;
 }
@@ -797,7 +801,7 @@ ul {
   min-width: 100%;
   background-color: var(--light);
   padding-top: 30px;
-  background-image: url(../img/contacts.jpg);
+  background-image: url('../img/contacts.jpg');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 100% 90%;
@@ -821,7 +825,7 @@ ul {
   margin-bottom: 15px;
   padding: 0 25px 6px 15px;
   display: inline-block;
-  background-image: url(../img/underline.png);
+  background-image: url('../img/underline.png');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
@@ -940,7 +944,7 @@ position: relative;
   margin-left: 40px;
   padding: 0 25px 10px 25px;
   display: inline-block;
-  background-image: url(../img/underline.png);
+  background-image: url('../img/underline.png');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
@@ -964,7 +968,7 @@ position: relative;
   position: relative;
   z-index: 2;
   background-color: var(--brown);
-  background-image: url(../img/products.png);
+  background-image: url('../img/products.png');
   background-position: center top 25%;
   background-repeat: no-repeat;
   background-size: cover;
