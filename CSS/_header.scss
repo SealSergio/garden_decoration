@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -18,15 +18,6 @@
     max-width: 450px;
   }
 }
-
-/* @media(min-width: 768px) {
-  .header {
-    left: auto;
-    right: auto;
-    margin: 0 auto;
-    max-width: 768px;
-  }
-} */
 
 .header-container {
   position: relative;
@@ -92,12 +83,6 @@
     font-size: 40px;
   }
 }
-
-/* @media(min-width: 540px) {
-  .main-title {
-    font-size: 55px;
-  }
-} */
 
 .burger-nav {
   position: relative;
